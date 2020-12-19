@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="naivebays.MainController">
+   <children>
+      <VBox alignment="TOP_CENTER" spacing="10.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" maxHeight="200.0" maxWidth="1.7976931348623157E308" prefHeight="20.0" text="Diabetes Prediction" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Path">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="inputPath" />
+                  <Button fx:id="findPath" mnemonicParsing="false" onAction="#ReadAndCreateModule" text="OpenFile" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="Number of times pregnant" />
+                        <TextField fx:id="valueFirst" alignment="CENTER" />
+                        <Label text="Plasma glucose concentration">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="valueSecond" alignment="CENTER" />
+                        <Label text="Diastolic blood pressure" />
+                        <TextField fx:id="valueThird" alignment="CENTER" />
+                        <Label text="Triceps skinfold thickness" />
+                        <TextField fx:id="valueFourth" alignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label text="2-Hour serum insulin" />
+                        <TextField fx:id="valueFifth" alignment="CENTER" />
+                        <Label text="Body mass index" />
+                        <TextField fx:id="valueSixth" alignment="CENTER" />
+                        <Label text="Diabetes pedigree function." />
+                        <TextField fx:id="valueSeventh" alignment="CENTER" />
+                        <Label text="Age " />
+                        <TextField fx:id="valueEighth" alignment="CENTER" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button fx:id="predict" mnemonicParsing="false" onAction="#predict" text="Predict">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <TextArea fx:id="output" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
